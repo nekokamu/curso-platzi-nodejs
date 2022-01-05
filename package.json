@@ -8,17 +8,9 @@
     "start": "node index.js",
     "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nekokamu/curso-platzi-nodejs.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nekokamu/curso-platzi-nodejs/issues"
-  },
-  "homepage": "https://github.com/nekokamu/curso-platzi-nodejs#readme",
   "devDependencies": {
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
@@ -27,6 +19,7 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "faker": "^5.5.3"
   }
 }
