@@ -5,14 +5,14 @@ const routerApi = require('./routes');
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; //Asigna el puerto si viene en una variable de entorno
 
 app.use(express.json()); //Middleware
 
 const allowlist = ['https://localhost:8080', 'https://myapp.com'];
 const options = {
   origin: (origin, callback) => {
-    if (allowlist.includes(origin)){
+    if (allowlist.includes(origin) || !origin){
       callback(null, true);
     } else {
       callback(new Error('no permitido'));
